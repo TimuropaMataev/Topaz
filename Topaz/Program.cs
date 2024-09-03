@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Topaz.Models;
+
 namespace Topaz;
 
 public class Program
@@ -5,6 +8,12 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
+        string? con = builder.Configuration
+            .GetConnectionString("Default");
+
+        builder.Services.AddDbContext<ApplicationContext>
+            (options => options.UseSqlServer(con));
 
         builder.Services.AddMvc();
 
