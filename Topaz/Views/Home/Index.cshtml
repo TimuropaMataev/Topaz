@@ -4,19 +4,27 @@
 <table class="table">
     <tr>
         <th>
-            <a>
-
+            <a asp-action="Index" asp-route-sortOrder="@ViewBag.NameSort">
+                imya
             </a>
         </th>
         <th>
-            <a>
-
+            <a asp-action="Index" asp-route-sortOrder="@ViewBag.AgeSort">
+                vozrast
             </a>
         </th>
         <th>
-            <a>
-
+            <a asp-action="Index" asp-route-sortOrder="@ViewBag.CompanySort">
+                kompania
             </a>
         </th>
     </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+            <td>@item.Company?.Name</td>
+        </tr>
+    }
 </table>
