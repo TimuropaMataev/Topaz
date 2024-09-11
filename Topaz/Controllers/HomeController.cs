@@ -26,7 +26,7 @@ public class HomeController : Controller
             User u5 = new User { Name = "Kan", Age = 25, Company = oko };
             User u6 = new User { Name = "Tyn", Age = 27, Company = oko };
             User u7 = new User { Name = "Alice", Age = 34, Company = dno };
-            User u8 = new User { Name = "Li", Age = 37, Company = kison };
+            User u8 = new User { Name = "Lii", Age = 37, Company = kison };
             User u9 = new User { Name = "Den", Age = 28, Company = dno };
             User u10 = new User { Name = "Hin", Age = 30, Company = kison };
 
