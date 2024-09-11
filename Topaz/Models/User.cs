@@ -6,7 +6,7 @@ public class User
 {
     public int Id { get; set; }
 
-    public int CompanyId { get; set; }
+    public int? CompanyId { get; set; }
 
     [Required(ErrorMessage = "Имя не указано")]
     [StringLength(40, MinimumLength = 2, ErrorMessage = "Диапазон от 2 до 40")]
